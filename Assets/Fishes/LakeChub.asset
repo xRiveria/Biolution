@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aa08210e4acb4bb7b0eec8ee19cde, type: 3}
   m_Name: LakeChub
   m_EditorClassIdentifier: 
-  fishName: 
-  fishGender: 0
-  fishPortrait: {fileID: 0}
-  fishWeight: 0
+  fishName: Lake Chub
+  fishGender: 1
+  fishPortrait: {fileID: 21300000, guid: eb2ccc94832e926469b5c4f3347798a5, type: 3}
+  fishWeight: 35
+  fishHunger: 8.1

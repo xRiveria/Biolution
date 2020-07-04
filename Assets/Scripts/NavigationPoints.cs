@@ -12,6 +12,7 @@ public class NavigationPoints : MonoBehaviour
     [Header("Navigation Points")]
     public Queue<NavigationStructure> navigationInstructions = new Queue<NavigationStructure>();
     public List<Transform> navigationLocations = new List<Transform>();
+    public List<Transform> foodLocations = new List<Transform>();
     //private Queue<Fish> fishesQueuing = new Queue<Fish>();
 
     NavigationStructure currentProcess;
@@ -32,9 +33,21 @@ public class NavigationPoints : MonoBehaviour
         instance.TryProcessingNext();
     }
 
+    public static void RequestFoodPath(Fish requester, Action<Vector3, bool> callback)
+    {
+        Vector3 movementPosition = instance.GetRandomFoodPosition();
+        instance.navigationInstructions.Enqueue(new NavigationStructure(movementPosition, callback));
+        instance.TryProcessingNext();
+    }
+
     private Vector3 GetRandomPosition()
     {
         return navigationLocations[(Random.Range(0, navigationLocations.Count))].transform.position;
+    }
+
+    private Vector3 GetRandomFoodPosition()
+    {
+        return foodLocations[(Random.Range(0, foodLocations.Count))].transform.position;
     }
 
 

@@ -12,6 +12,7 @@ public class FishQuickViewSystem : MonoBehaviour
     [SerializeField] private Image fishMalePortrait;
     [SerializeField] private Image fishFemalePortrait;
     [SerializeField] private Text fishWeightText;
+    [SerializeField] private Image fishHungerBarFill;
 
     static FishQuickViewSystem instance;
 
@@ -35,6 +36,7 @@ public class FishQuickViewSystem : MonoBehaviour
         }
 
         instance.fishWeightText.text = fishInformation.GetFishWeight().ToString() + " Pounds";
+        instance.fishHungerBarFill.fillAmount = fishInformation.GetFishHunger() / 100;
 
         instance.fishQuickViewPanel.SetActive(true);
     }

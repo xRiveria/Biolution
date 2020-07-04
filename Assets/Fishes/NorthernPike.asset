@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aa08210e4acb4bb7b0eec8ee19cde, type: 3}
   m_Name: NorthernPike
   m_EditorClassIdentifier: 
-  fishName: 
-  fishGender: 0
-  fishPortrait: {fileID: 0}
-  fishWeight: 0
+  fishName: Northern Pike
+  fishGender: 1
+  fishPortrait: {fileID: 21300000, guid: 53cae3c4721072e41bbad2f121db145d, type: 3}
+  fishWeight: 25
+  fishHunger: 87

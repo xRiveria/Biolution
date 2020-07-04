@@ -16,6 +16,7 @@ public class Fish : MonoBehaviour
     {
         outline = GetComponent<Outline>();
         outline.enabled = false;
+        fishTemplate = Instantiate(fishTemplate);
         m_NavigationAgent = GetComponent<NavMeshAgent>();
         NavigationPoints.RequestPath(this, OnPathFound);
     }
@@ -34,6 +35,12 @@ public class Fish : MonoBehaviour
 
     private void Update()
     {
+       // if (fishTemplate.GetFishHunger() < 80f)
+       // {
+       //     NavigationPoints.RequestFoodPath(this, OnPathFound);
+       // }
+
+       // else 
         if (m_NavigationAgent.pathEndPosition.x == transform.position.x)
         {
             NavigationPoints.RequestPath(this, OnPathFound);
@@ -53,4 +60,11 @@ public class Fish : MonoBehaviour
             m_NavigationAgent.SetDestination(newPath);
         }
     }
+
+    public Fish_Template GetFishInformation()
+    {
+        return fishTemplate;
+    }
+
+
 }

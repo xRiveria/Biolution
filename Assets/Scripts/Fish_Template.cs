@@ -12,6 +12,7 @@ public class Fish_Template : ScriptableObject
     [SerializeField] private FishGender fishGender;
     [SerializeField] private Sprite fishPortrait;
     [SerializeField] private float fishWeight;
+    [SerializeField][Range(-10, 100)] private float fishHunger = 50;
 
     public string GetFishName()
     {
@@ -31,6 +32,16 @@ public class Fish_Template : ScriptableObject
     public float GetFishWeight()
     {
         return fishWeight;
+    }
+
+    public float GetFishHunger()
+    {
+        return fishHunger;
+    }
+
+    public void IncrementHunger(float hungerFilled)
+    {
+        fishHunger += hungerFilled;
     }
 }
 

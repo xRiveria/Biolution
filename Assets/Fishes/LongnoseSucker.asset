@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aa08210e4acb4bb7b0eec8ee19cde, type: 3}
   m_Name: LongnoseSucker
   m_EditorClassIdentifier: 
-  fishName: 
+  fishName: Longnose Sucker
   fishGender: 0
-  fishPortrait: {fileID: 0}
-  fishWeight: 0
+  fishPortrait: {fileID: 21300000, guid: 09a5f506c9833c5468c6f029e3c92ed5, type: 3}
+  fishWeight: 45
+  fishHunger: 1.3

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aa08210e4acb4bb7b0eec8ee19cde, type: 3}
   m_Name: MimicShiner
   m_EditorClassIdentifier: 
-  fishName: 
-  fishGender: 0
-  fishPortrait: {fileID: 0}
-  fishWeight: 0
+  fishName: Mimic Shiner
+  fishGender: 1
+  fishPortrait: {fileID: 21300000, guid: df3aa0885b6f8f14fafa9a5d3533d571, type: 3}
+  fishWeight: 32
+  fishHunger: 73.9
